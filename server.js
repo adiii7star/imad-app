@@ -8,17 +8,10 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-app.get('/article-one',function(req, res){
-   res.send('Article One requested and will be served'); 
-});
-
-app.get('/article-two',function(req, res){
-   res.send('Article two requested and will be served'); 
-});
-
-app.get('/article-three',function(req, res){
-   res.send('Article threee will get served'); 
+var counter
+app.get('/counter' ,function(req, res){
+    counter=counter+1;
+    res.send(counter.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {

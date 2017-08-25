@@ -6,7 +6,7 @@ button.onclick=function(){
   var request=new XMLHttpRequest();
   //Capture the enpoint in the variabe
   request.onreadystate=function(){
-      if(request.readystate===XMLhttpRequest.DONE){
+      if(request.readystate===XMLHttpRequest.DONE){
           //Take Some Action
           if(request.status===200){
               var counter=request.responsetext;

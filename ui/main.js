@@ -1,13 +1,23 @@
 //Now we will use the button to add the functionality
 var button=document.getElementById('counter');
-var counter=0;
+
 button.onclick=function(){
-  //Make a request to the counter endpoint
-  
+  //Create a Request Object
+  var request=new XMLHttpRequest();
   //Capture the enpoint in the variabe
-  
+  request.onreadystate=function(){
+      if(request.readystate===XMLhttpRequest.DONE){
+          //Take Some Action
+          if(request.status===200){
+              var counter=request.responsetext;
+                var span=document.getElementById('count');
+                span.innerHTML=counter.toString();             
+          }
+      }
+      //None
+  }
   //Render the variable in the correct span
-  counter=counter+1;
-  var span=document.getElementById('count');
-  span.innerHTML=counter.toString(); 
+  request.open('GET' , 'http://adityasbodkhe.imad.hasura-app.io' ,true);
+  request.send(null);
+  
 };

@@ -1,4 +1,4 @@
-console.log('Loaded!');
+console.log('Loaded fast!');
 
 //Now will add some changes
 var element=document.getElementById("main-id");

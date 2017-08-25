@@ -5,11 +5,11 @@ button.onclick=function(){
   //Create a Request Object
   var request=new XMLHttpRequest();
   //Capture the enpoint in the variabe
-  request.onreadystate=function(){
+  request.onreadystatechange = function(){
       if(request.readystate===XMLHttpRequest.DONE){
           //Take Some Action
           if(request.status===200){
-              var counter=request.responsetext;
+              var counter=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=counter.toString();             
           }

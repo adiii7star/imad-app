@@ -17,7 +17,7 @@ button.onclick=function(){
       //None
   }
   //Render the variable in the correct span
-  request.open('GET' , 'http://adityasbodkhe.imad.hasura-app.io' ,true);
+  request.open('GET' , 'http://adityasbodkhe.imad.hasura-app.io/counter' ,true);
   request.send(null);
   
 };

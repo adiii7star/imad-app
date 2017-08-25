@@ -1,5 +1,5 @@
 //Now we will use the button to add the functionality
-var button=getElementById('counter');
+var button=document.getElementById('counter');
 var counter=0;
 button.onclick=function(){
   //Make a request to the counter endpoint
